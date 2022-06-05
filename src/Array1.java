@@ -2,21 +2,29 @@
 public class Array1 {
 
 	public static void main(String[] args) {
-		int[]score = new int[5];
-		int k = 1;
+		int[][]score = { // score.length는 행의 길이라서 5, 그리고 각 열의 길이가 동일하니 score[i]는 3으로 동일.
+				{100, 100, 100}, 
+				{20, 20, 20}, 
+				{30, 30, 30}, 
+				{40, 40, 40}, 
+				{50, 50, 50}};
+		int total = 0;
+		float avg = 0.0f;
+		System.out.println("번호  국어  영어    수학  총점  평균");
+		System.out.println("=====================================");
 		
-		score[0] = 50;
-		score[1] = 60;
-		score[k+1] = 70; // score[2]=70
-		score[3] = 80;
-		score[4] = 90;
-		
-		int tmp = score[k+2] + score[4]; // 80+90
-		
-		for(int i=0;i<5;i++) {
-			System.out.printf("score[%d]:%d%n", i, score[i]);
+		for(int i=0;i<score.length;i++) {
+			System.out.printf("%3d", i+1);
+			for(int j=0;j<score[i].length;j++) {
+				total += score[i][j];
+				System.out.printf("%5d", score[i][j]);
+			}
+			System.out.printf("%5d", total);
+			avg = (float)total/score[i].length;
+			System.out.printf("%5.1f", avg);
+			
+			System.out.println();
 		}
-		System.out.printf("tmp:%d%n",tmp);
-		System.out.println();
+	
 	}
 }

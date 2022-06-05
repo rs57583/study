@@ -1,3 +1,5 @@
+// 객체지향개념 초반. cv와 iv의 차이점은 일단 static을 붙인다는점과
+// cv는 다른 클래서에서 바로 사용가능하지만 (클래스타입.변수이름) iv는 반드시 new연산자를 이용해서 객체를 생성하고 사용해야 한다
 
 class CardTest {
 	public static void main(String[] args) {

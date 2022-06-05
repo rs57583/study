@@ -1,29 +1,17 @@
-import java.util.Arrays;
-
+import java.util.*; // Arrays.toString은 import문이 필요하다!
 public class Array2 {
-
+// 불연속적인 숫자로 이루어진 길이 5의 배열을 길이 10의 배열에서 나열해보기. 중복이 생기고 복사할때랑 비슷한듯? 
 	public static void main(String[] args) {
-		int[]iArr1 = new int[10];
-		int[]iArr2 = new int[10];
-		int[]iArr3 = {100,95,80,70,60};
-		char[]chArr = {'a', 'b', 'c', 'd'};
+		int[]code = {-4, -1, 3, 6, 1}; // 개수는 5개
+		int[]arr = new int[10];
 		
-		for(int i=0;i<iArr1.length;i++) {
-			iArr1[i]= i+1;
-		}
-		for(int i=0;i<iArr2.length;i++) {
-			iArr2[i] = (int)(Math.random()*10)+1;
-		}
-		for(int i=0;i<iArr3.length;i++) {
-			System.out.print(iArr3[i]+",");
+		for(int i=0;i<arr.length;i++) {
+			int tmp = (int)(Math.random()*5); // 0~4
+			arr[i] = code[tmp];
 		}
 		
-		System.out.println();
-		System.out.println(iArr2);
-		System.out.println(Arrays.toString(iArr2));
-		System.out.println(Arrays.toString(iArr3));
-		System.out.println(chArr);
-		System.out.println(Arrays.toString(chArr));
+		System.out.println(Arrays.toString(arr)); // random메소드를 사용해서 결과는 계속 달라짐
+		
 		
 	}
 }
